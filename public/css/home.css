@@ -24,6 +24,7 @@
 
 body{
     font-family: var(--font-roboto);
+    background-color: var(--ColorGrisClaro);
 }
 a{
     color: black;
@@ -46,6 +47,7 @@ header{
 }
 
 header .burger-menu{
+    box-sizing: content-box;
     border-radius: 5px;
     background-color: var(--ColorCeleste); 
     color:white; 
@@ -61,6 +63,10 @@ header img#logo{
     margin-left: 25px;
 }
 
+header nav {
+    display: none;
+}
+
 header .busqueda{
     margin-left: 25px;
 }
@@ -72,6 +78,69 @@ header p{
 }
 /* FIN HEADER */
 
+/* HOME */ 
+main div img {
+    width: 100%;
+    /*margin-top: 5px;*/
+}
+
+main h3.subtitulo{
+    color: #666;
+    padding: 10px;
+    text-align: left;
+}
+
+main section {
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section.productos {
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+main section article {
+    border: 10px solid rgba(221, 215, 221, 0.733);
+    max-width: 380px;
+    line-height: 22px;
+    padding: 0px 0px 15px 10px;
+    background-color: white;
+    margin: 8px auto;
+}
+
+main section article div i {
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    color: var(--color-verde);
+    /* position: absolute; */
+    top: -20px;
+    right: 20px;
+    transition: all 0.05s easemain 
+}
+    
+article strong {
+    color: white;
+    opacity: 7;
+    transition: all 450ms;
+    }
+
+.precio {
+    font-size: var(--prices);
+}
+        
+#porcentaje {
+    color: green;
+    padding-left: 10px;
+}
+footer i.icono-Footer {
+    color: var(--ColorCeleste);
+}
 /* FOOTER */
 footer {
     text-align: center;
@@ -104,4 +173,42 @@ footer p#copyright{
     text-align: left;
     padding-left: 10px;
 }
+/* FIN FOOTER */
 
+/*MEDIA QUERYS*/ 
+/* VERSION TABLET */
+
+@media(min-width: 768px) {  
+     header.burguer-menu{
+        display: none;
+    }
+
+    header{
+        width: 100%;
+    }
+   
+    .tablet {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .busqueda{
+        margin-left: 100px; 
+    }
+
+    header nav{
+        display: block;
+        margin: 0 5px; 
+    }
+    
+    .menu{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav.menu li{
+        display: inline-flex;
+        margin:0 5px;
+        }
+}
